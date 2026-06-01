@@ -31,6 +31,11 @@ class _QuoteListState extends State<QuoteList> {
       text: 'The truth is rarely pure and never simple',
       category: 'General',
     ),
+        Quote(
+      author: 'Anthony Frialde',
+      text: 'This is a test quote its made for testing',
+      category: 'Test',
+    ),
   ];
 
   Future<void> confirmDelete(Quote quote) async {

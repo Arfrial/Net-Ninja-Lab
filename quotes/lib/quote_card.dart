@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'quote.dart';
 
 class QuoteCard extends StatelessWidget {
@@ -58,8 +59,22 @@ class QuoteCard extends StatelessWidget {
 
             const SizedBox(height: 8),
 
-            Chip(
-              label: Text(quote.category),
+            Wrap(
+              spacing: 8,
+              crossAxisAlignment: WrapCrossAlignment.center,
+              children: [
+
+                Chip(
+                  label: Text(quote.category),
+                ),
+
+                Text(
+                  DateFormat('MMM d, yyyy').format(quote.createdAt),
+                  style: TextStyle(
+                    color: Colors.grey[700],
+                  ),
+                ),
+              ],
             ),
 
             Row(
